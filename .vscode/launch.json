@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Launch App",
+      "program": "${workspaceFolder}/target/debug/task-manager",
+      "args": [
+        "--name",
+        "Andrei Drynov"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "MY_VAR": "some_value",
+        "DEBUG_WAIT": "true"
+      },
+      "preLaunchTask": "cargo build"
+    }
+  ]
+}
