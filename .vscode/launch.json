@@ -5,7 +5,7 @@
       "type": "lldb",
       "request": "launch",
       "name": "Launch App",
-      "program": "${workspaceFolder}/target/debug/task-manager",
+      "program": "${workspaceFolder}/target/debug/hello-rust",
       "args": [
         "--name",
         "Andrei Drynov"

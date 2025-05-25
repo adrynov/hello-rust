@@ -1,4 +1,4 @@
 [workspace]
-members = [ "task-manager"]
+members = [ "hello-rust", "task-manager"]
 
 resolver= "3"
