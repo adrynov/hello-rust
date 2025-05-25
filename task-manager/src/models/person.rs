@@ -11,7 +11,7 @@ pub struct Person {
     pub name: String,
     pub age: u8,
     pub phones: Vec<String>,
-    pub viewCount: ViewCount,
+    pub view_count: ViewCount,
 }
 
 impl Person {

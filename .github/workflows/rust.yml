@@ -1,9 +1,11 @@
-name: Hello Rust CI
+﻿name: Hello Rust CI
 
 on:
   push:
     branches:
       - main
+    tags:
+      - '**'
   pull_request:
     branches: [ "main" ]
 
@@ -12,8 +14,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Rust
+      - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
       - name: Install cargo audit
         run: cargo install cargo-audit
       - name: Build code

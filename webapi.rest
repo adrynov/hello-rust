@@ -1,0 +1,2 @@
+﻿### simple request
+GET http://localhost:3004/greet

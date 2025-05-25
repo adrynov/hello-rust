@@ -1,7 +1,6 @@
 mod models;
 
-use serde::{Deserialize, Serialize};
-use models::person::{Person, ViewCount};
+use models::person::Person;
 
 const DATA: &str = r#"
 {
@@ -20,7 +19,7 @@ fn main() {
     match Person::from_json(DATA) {
         Ok(person) => {
             println!("Parsed person: {:?}", person);
-            let view_count = person.viewCount.n;
+            let view_count = person.view_count.n;
             println!("View count: {}", view_count);
             // Example usage:
             // println!("Please call {} at the number {}", person.name, person.phones[0]);
@@ -29,6 +28,4 @@ fn main() {
             eprintln!("Failed to parse person: {}", e);
         }
     }
-
-    let sum_squares: i32 = (1..=10).map(|x| x * x).sum();
 }

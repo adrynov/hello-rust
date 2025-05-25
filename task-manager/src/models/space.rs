@@ -1,4 +1,4 @@
-﻿use std::fmt::{self, Display, Formatter};
+﻿use std::fmt::Display;
 
 #[derive(PartialEq, PartialOrd)]
 pub struct Satellite {
@@ -6,27 +6,6 @@ pub struct Satellite {
     pub name: String,
     pub description: String,
     pub velocity: f64,
-}
-
-pub struct SpaceStation {
-    pub id: String,
-    pub name: String,
-    pub description: String,
-    pub crew_size: u8,
-    pub altitude: f64,
-}
-
-trait Description {
-    fn describe(&self) -> String;
-}
-
-impl Description for Satellite {
-    fn describe(&self) -> String {
-        format!(
-            "Satellite ID: {}, Name: {}, Description: {}, Velocity: {} km/h",
-            self.id, self.name, self.description, self.velocity
-        )
-    }
 }
 
 impl Display for Satellite {
